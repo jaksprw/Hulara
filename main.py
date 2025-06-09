@@ -23,8 +23,8 @@ WP_MEDIA_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2
 WP_CATEGORIES_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2/categories"
 WP_TAGS_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2/tags"
 
-WP_USERNAME = "admin"
-WP_PASSWORD = "muLs MJcl 7iAn 2zrl wvR0 98ap"
+WP_USERNAME = "Deep@gmail.com"
+WP_PASSWORD = "fE4n M8pz rpDg OBUN IlPs MfOE"
 
 # User-Agent List
 USER_AGENTS = [
@@ -211,16 +211,13 @@ def upload_to_wordpress(post_data):
         logging.error(f"Failed: {post_data['title']}, Response: {response.text}")
 
 def main():
-    sitemap_urls = [
-    "https://deephot.link/post-sitemap5.xml", 
-    "https://deephot.link/post-sitemap6.xml",
-    "https://deephot.link/post-sitemap7.xml",
-    "https://deephot.link/post-sitemap8.xml",
+    sitemap_urls = [    
+    "https://deephot.link/post-sitemap8.xml"
     ]
     existing_titles = fetch_existing_titles()
     post_urls = get_urls_from_sitemaps(sitemap_urls)
 
-    with ThreadPoolExecutor(max_workers=5) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         futures = {executor.submit(scrape_post, url): url for url in post_urls}
         for future in as_completed(futures):
             post_data = future.result()
