@@ -18,13 +18,13 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # WordPress API
-WP_API_URL = "https://chek.dhanjeerider.shop/wp-json/wp/v2/posts"
-WP_MEDIA_URL = "https://chek.dhanjeerider.shop/wp-json/wp/v2/media"
-WP_CATEGORIES_URL = "https://chek.dhanjeerider.shop/wp-json/wp/v2/categories"
-WP_TAGS_URL = "https://chek.dhanjeerider.shop/wp-json/wp/v2/tags"
+WP_API_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2/posts"
+WP_MEDIA_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2/media"
+WP_CATEGORIES_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2/categories"
+WP_TAGS_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2/tags"
 
 WP_USERNAME = "admin"
-WP_PASSWORD = "bKJF 6RM5 lbiY Jk1Q RddU X6ar"
+WP_PASSWORD = "muLs MJcl 7iAn 2zrl wvR0 98ap"
 
 # User-Agent List
 USER_AGENTS = [
