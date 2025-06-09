@@ -1,0 +1,26 @@
+name: Run Daily Python Scraper
+
+on:
+  schedule:
+    - cron: '30 1 * * 1'  # Daily at 7:00 AM IST
+  workflow_dispatch:      # Manual run option
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 dateparser
+
+      - name: Run script
+        run: python main.py
