@@ -212,9 +212,10 @@ def upload_to_wordpress(post_data):
 
 def main():
     sitemap_urls = [
-        "https://deephot.link/post-sitemap.xml",  # Replace or add more sitemaps
-        # "https://spddm.org/page-sitemap.xml",
-        # "https://spddm.org/category-sitemap.xml",
+    "https://deephot.link/post-sitemap5.xml", 
+    "https://deephot.link/post-sitemap6.xml",
+    "https://deephot.link/post-sitemap7.xml",
+    "https://deephot.link/post-sitemap8.xml",
     ]
     existing_titles = fetch_existing_titles()
     post_urls = get_urls_from_sitemaps(sitemap_urls)
