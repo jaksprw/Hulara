@@ -23,4 +23,4 @@ jobs:
           pip install requests aiohttp beautifulsoup4 dateparser
 
       - name: Run script
-        run: python Nen.py
+        run: python vgn.py
