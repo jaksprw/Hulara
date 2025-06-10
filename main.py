@@ -217,7 +217,7 @@ def main():
     existing_titles = fetch_existing_titles()
     post_urls = get_urls_from_sitemaps(sitemap_urls)
 
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=3) as executor:
         futures = {executor.submit(scrape_post, url): url for url in post_urls}
         for future in as_completed(futures):
             post_data = future.result()
