@@ -14,9 +14,9 @@ import concurrent.futures
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # --- WordPress API Info ---
-WP_API_URL = "https://chek.dhanjeerider.shop/wp-json/wp/v2/posts"
-WP_MEDIA_URL = "https://chek.dhanjeerider.shop/wp-json/wp/v2/media"
-WP_CATEGORIES_URL = "https://chek.dhanjeerider.shop/wp-json/wp/v2/categories"
+WP_API_URL = "https://9xflix.at/wp-json/wp/v2/posts"
+WP_MEDIA_URL = "https://9xflix.at/wp-json/wp/v2/media"
+WP_CATEGORIES_URL = "https://9xflix.at/wp-json/wp/v2/categories"
 WP_USERNAME = "admin"
 WP_PASSWORD = "FJJc J9uY KO1T xArI DI2y Igd2"
 
@@ -340,7 +340,7 @@ def scrape_and_upload_post(post, existing_titles, lock):
 def main():
     base_url = "https://vegamovies.mk/"
     start_page = 1
-    end_page = 566
+    end_page = 200
 
     existing_titles = fetch_existing_titles()
     existing_titles_lock = threading.Lock()
