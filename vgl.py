@@ -17,8 +17,8 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 WP_API_URL = "https://9xflix.at/wp-json/wp/v2/posts"
 WP_MEDIA_URL = "https://9xflix.at/wp-json/wp/v2/media"
 WP_CATEGORIES_URL = "https://9xflix.at/wp-json/wp/v2/categories"
-WP_USERNAME = "admin"
-WP_PASSWORD = "FJJc J9uY KO1T xArI DI2y Igd2"
+WP_USERNAME = "temp-login-GCXaagcpS5h9ZNc"
+WP_PASSWORD = "hZq2 GiG7 giP1 GoBF bx67 QOND"
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
