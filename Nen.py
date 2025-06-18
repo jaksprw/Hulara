@@ -14,12 +14,12 @@ warnings.filterwarnings("ignore", category=urllib3.exceptions.InsecureRequestWar
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-WP_API_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2/posts"
-WP_CATEGORIES_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2/categories"
-WP_TAGS_URL = "https://lightsalmon-finch-839269.hostingersite.com/wp-json/wp/v2/tags"
+WP_API_URL = "https://standborder.s6-tastewp.com/wp-json/wp/v2/posts"
+WP_CATEGORIES_URL = "https://standborder.s6-tastewp.com/wp-json/wp/v2/categories"
+WP_TAGS_URL = "https://standborder.s6-tastewp.com/wp-json/wp/v2/tags"
 
-WP_USERNAME = "Deep@gmail.com"
-WP_PASSWORD = "fE4n M8pz rpDg OBUN IlPs MfOE"
+WP_USERNAME = "admin"
+WP_PASSWORD = "u6GX 5jIn P4T1 AGDh Ihrs REs9"
 
 AUTH_HEADER = {
     'Authorization': 'Basic ' + base64.b64encode(f"{WP_USERNAME}:{WP_PASSWORD}".encode()).decode(),
