@@ -10,11 +10,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # WordPress API setup
-WP_API_URL = "https://zharmovies.com/wp-json/wp/v2/posts"
-WP_MEDIA_URL = "https://zharmovies.com/wp-json/wp/v2/media"
-WP_CATEGORIES_URL = "https://zharmovies.com/wp-json/wp/v2/categories"
-WP_USERNAME = "krrishn344@gmail.com"
-WP_PASSWORD = "Ett1 H8L9 7tdE DlJ6 CShQ xnFl"
+WP_API_URL = "https://snow-mandrill-176414.hostingersite.com/wp-json/wp/v2/posts"
+WP_MEDIA_URL = "https://snow-mandrill-176414.hostingersite.com/wp-json/wp/v2/media"
+WP_CATEGORIES_URL = "https://snow-mandrill-176414.hostingersite.com/wp-json/wp/v2/categories"
+WP_USERNAME = "dkkr5558@gmail.com"
+WP_PASSWORD = "7R8g NWYk 6aUu JCcV Fere 8C2y"
 
 # User-Agent list
 USER_AGENTS = [
