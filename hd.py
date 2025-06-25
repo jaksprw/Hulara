@@ -211,8 +211,8 @@ def process_page(page_url, existing_titles):
 
 
 def main():
-    base = "https://hdhub4u.gratis/category/bollywood-movies/"
-    start, end = 1, 75
+    base = "https://hdhub4u.fail/"
+    start, end = 1, 795
     existing = fetch_existing_titles()
     all_uploaded = []
 
