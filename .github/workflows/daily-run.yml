@@ -1,4 +1,4 @@
-name: Run Daily Python Scraper
+name: Run Daily lux Python Scraper
 
 on:
   schedule:
@@ -23,4 +23,4 @@ jobs:
           pip install requests aiohttp beautifulsoup4 dateparser
 
       - name: Run script
-        run: python dp.py
+        run: python vgl.py
