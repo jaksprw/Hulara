@@ -14,10 +14,10 @@ import concurrent.futures
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # --- WordPress API Info ---
-WP_API_URL = "https://9xflix.at/wp-json/wp/v2/posts"
-WP_MEDIA_URL = "https://9xflix.at/wp-json/wp/v2/media"
-WP_CATEGORIES_URL = "https://9xflix.at/wp-json/wp/v2/categories"
-WP_USERNAME = "temp-login-GCXaagcpS5h9ZNc"
+WP_API_URL = "https://mirchimovies.xyz/wp-json/wp/v2/posts"
+WP_MEDIA_URL = "https://mirchimovies.xyz/wp-json/wp/v2/media"
+WP_CATEGORIES_URL = "https://mirchimovies.xyz/wp-json/wp/v2/categories"
+WP_USERNAME = "admin"
 WP_PASSWORD = "hZq2 GiG7 giP1 GoBF bx67 QOND"
 
 USER_AGENTS = [
@@ -338,9 +338,9 @@ def scrape_and_upload_post(post, existing_titles, lock):
         logging.error(f"Error processing post '{post.get('title')}': {e}")
 
 def main():
-    base_url = "https://vegamovies.mk/"
+    base_url = "https://rogmovies.ink/"
     start_page = 1
-    end_page = 200
+    end_page = 55
 
     existing_titles = fetch_existing_titles()
     existing_titles_lock = threading.Lock()
