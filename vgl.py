@@ -18,8 +18,7 @@ WP_API_URL = "https://mirchimovies.xyz/wp-json/wp/v2/posts"
 WP_MEDIA_URL = "https://mirchimovies.xyz/wp-json/wp/v2/media"
 WP_CATEGORIES_URL = "https://mirchimovies.xyz/wp-json/wp/v2/categories"
 WP_USERNAME = "dktechno"
-WP_PASSWORD = "Tikc ORL9 5OXV inSF JvyB tpUI"
-
+WP_PASSWORD = "NGqy cmfA 03nw JLr1 umfU cQ4n"
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
