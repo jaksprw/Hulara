@@ -3,7 +3,7 @@ name: Run Daily lux Python Scraper
 on:
   schedule:
     - cron: '30 1 * * 1'  # Daily at 7:00 AM IST
-  workflow_dispatch:      # Manual run option
+   
 
 jobs:
   run-python-script:
