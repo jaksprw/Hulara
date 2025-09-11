@@ -3,23 +3,29 @@ import requests
 import time
 import random
 import xml.etree.ElementTree as ET
+import os
+import platform
 
 target_sitemap = "https://www.riyawebtechnology.com/sitemap.xml"
 
-# Some real browser user agents
 user_agents = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
     "Mozilla/5.0 (Linux; Android 12; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Mobile Safari/537.36",
 ]
 
-# Common referrers
 referrers = [
     "https://www.pornhub.com/",
     "https://www.xvideos.com/",
     "https://deephot.link/",
     "https://www.onlyfans.com/"
 ]
+
+def clear_console():
+    if platform.system() == "Windows":
+        os.system("cls")
+    else:
+        os.system("clear")
 
 def get_sitemap_urls(sitemap_url):
     try:
@@ -62,14 +68,17 @@ def main():
     print(f"Found {len(urls)} URLs in sitemap.")
 
     while True:
-        # First visit all URLs quickly
+        start_time = time.time()
+
         visit_all_urls(urls)
 
-        # Wait 3 seconds
-        time.sleep(0)
+        # Wait until 5 seconds total have passed
+        elapsed = time.time() - start_time
+        if elapsed < 5:
+            time.sleep(5 - elapsed)
 
-        # Reload all URLs quickly
-        visit_all_urls(urls)
+        # Clear console every 5 seconds
+        clear_console()
 
 if __name__ == "__main__":
-    main()
+    main()    
