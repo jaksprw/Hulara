@@ -1,9 +1,9 @@
-name: Run vgflic
+name: Run Daily Python Scraper
 
 on:
   schedule:
-   # Daily at 7:00 AM IST
-   
+    - cron: '30 1 * * 1'  # Daily at 7:00 AM IST
+  workflow_dispatch:      # Manual run option
 
 jobs:
   run-python-script:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests aiohttp beautifulsoup4 dateparser
+          pip install requests beautifulsoup4 cloudscraper aiohttp dateparser
 
       - name: Run script
         run: python td.py
