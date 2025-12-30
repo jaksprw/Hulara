@@ -5,7 +5,7 @@ import dateparser
 
 # ================= CONFIG ================= #
 BASE_URL = "https://moviesmod.build/page/"
-START_PAGE = 1
+START_PAGE = 501
 END_PAGE = 1010
 
 WP_API = "https://ecom.tamilprint.info/wp-json/wp/v2/posts"
@@ -15,7 +15,7 @@ WP_CAT = "https://ecom.tamilprint.info/wp-json/wp/v2/categories"
 WP_USER = "admin"
 WP_PASS = "uY7B ApDt 2HBW BCKy p7mb HfWP"
 
-MAX_WORKERS = 8
+MAX_WORKERS = 15
 # ======================================== #
 
 session = requests.Session()
