@@ -5,7 +5,7 @@ import dateparser
 
 # ================= CONFIG ================= #
 BASE_URL = "https://moviesmod.build/page/"
-START_PAGE = 200
+START_PAGE = 186
 END_PAGE = 500
 
 WP_API = "https://ecom.tamilprint.info/wp-json/wp/v2/posts"
