@@ -6,8 +6,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 # ================= CONFIG =================
 BASE_URL = "https://rogmovies.world/"
-START_PAGE = 1
-END_PAGE = 50000
+START_PAGE = 150
+END_PAGE = 365
 
 DEST_SITE = "https://seashell-whale-304753.hostingersite.com"
 WP_API = DEST_SITE + "/wp-json/wp/v2/posts"
