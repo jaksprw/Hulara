@@ -23,4 +23,4 @@ jobs:
           pip install requests aiohttp beautifulsoup4 python-dateutil dateparser
 
       - name: Run script
-        run: python nextdv.py
+        run: python nexdv.py
