@@ -24,4 +24,4 @@ jobs:
           pip install requests beautifulsoup4 cloudscraper aiohttp dateparser
 
       - name: Run script
-        run: python hbdv.py
+        run: python hddv.py
