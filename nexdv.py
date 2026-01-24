@@ -6,8 +6,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 # ================= CONFIG =================
 BASE_URL = "https://vegamovies.sy/"
-START_PAGE = 500
-END_PAGE = 900
+START_PAGE = 100
+END_PAGE = 250
 
 DEST_SITE = "https://seashell-whale-304753.hostingersite.com"
 WP_API = DEST_SITE + "/wp-json/wp/v2/posts"
@@ -75,14 +75,27 @@ def scrape_button_page(btn_url):
     visited_buttons.add(btn_url)
     soup = BeautifulSoup(fetch(btn_url), "html.parser")
 
-    title = soup.title.text.strip() if soup.title else "Download Link"
+    # 🏷 Title
+    title = soup.title.text.strip() if soup.title else "Download Links"
 
-    content_blocks = []
-    for p in soup.find_all("p"):
-        if p.find("a"):
-            content_blocks.append(str(p))
+    content_html = ""
 
-    return title, "\n".join(content_blocks)
+    # 1️⃣ Try .card first
+    card = soup.select_one(".card")
+    if card:
+        content_html = str(card)
+
+    # 2️⃣ Fallback → .entry-content
+    if not content_html:
+        entry = soup.select_one(".entry-content")
+        if entry:
+            content_html = str(entry)
+
+    # 3️⃣ Last safety fallback (optional)
+    if not content_html:
+        content_html = "<p>Download links not found.</p>"
+
+    return title, content_html
 
 def publish_wp(title, content):
     payload = {
