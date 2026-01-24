@@ -5,9 +5,9 @@ import base64
 from concurrent.futures import ThreadPoolExecutor
 
 # ================= CONFIG =================
-BASE_URL = "https://rogmovies.world/"
-START_PAGE = 272
-END_PAGE = 365
+BASE_URL = "https://vegamovies.sy/"
+START_PAGE = 500
+END_PAGE = 900
 
 DEST_SITE = "https://seashell-whale-304753.hostingersite.com"
 WP_API = DEST_SITE + "/wp-json/wp/v2/posts"
@@ -56,14 +56,20 @@ def extract_button_links(post_url):
     soup = BeautifulSoup(fetch(post_url), "html.parser")
     btn_links = []
 
-    for p in soup.find_all("p"):
-        if p.get("style") and "text-align" in p["style"]:
-            for a in p.find_all("a", href=True):
-                if a.find("button"):
-                    if a["href"] not in visited_buttons:
-                        btn_links.append(a["href"])
+    # h1–h6 or div with text-align:center
+    for tag in soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "div"]):
+        style = tag.get("style", "")
+        if "text-align" in style and "center" in style:
+            for a in tag.find_all("a", href=True):
+                # ensure it's a download-style button
+                if a.find("button") or "btn" in a.get("class", []):
+                    href = a["href"].strip()
+                    if href and href not in visited_buttons:
+                        visited_buttons.add(href)
+                        btn_links.append(href)
 
     return btn_links
+
 
 def scrape_button_page(btn_url):
     visited_buttons.add(btn_url)
